@@ -7,16 +7,16 @@ function capitalizeLetters(str) {
 }
 console.log("Exercise 1:");
 console.log(capitalizeLetters("the quick brown fox"));
+console.log("\n")
 
 function max(a, b, c) {
-  if (a >= b && a >= c) return a;
-  else if (b >= a && b >= c) return b;
-  else if (c >= a && c >= b) return c;
+  return Math.max(...arguments);
 }
 console.log("Exercise 2:");
 console.log(max(1, 0, 1));
 console.log(max(0, -10, -20));
 console.log(max(1000, 510, 440));
+console.log("\n")
 
 function right(str) {
   if (str.length >= 3) {
@@ -31,6 +31,7 @@ console.log("Exercise 3:");
 console.log(right("Python"));
 console.log(right("JavaScript"));
 console.log(right("Hi"));
+console.log("\n")
 
 function angle_Type(angle) {
   angle = angle % 360;
