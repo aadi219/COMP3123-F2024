@@ -21,4 +21,6 @@ const callAsync = async () => {
   console.log("call-4");
 };
 
-callAsync();
+makePromise(20).catch(e => {
+  console.log(e);
+});
