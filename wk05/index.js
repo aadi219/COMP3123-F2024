@@ -59,17 +59,22 @@ router.get("/logout/:username", (req, res) => {
   res.send(`<b>${username} successfully logout.`);
 });
 
+app.use(express.json());
+app.use("/", router);
+
 /*
 Add error handling middleware to handle below error
 - Return 500 page with message "Server Error"
 */
 app.use((err, req, res, next) => {
-  console.log(err);
-  res.status(500).send("Server Error");
+  if (err) {
+    console.log(err);
+    res.status(500).send("Server Error");
+  }
+  else {
+    next();
+  }
 });
-
-app.use(express.json());
-app.use("/", router);
 
 app.listen(process.env.port || 8081);
 
