@@ -6,7 +6,7 @@ console.log("Lab 03 -  NodeJs");
 //TODO - Fix any errors you found working with lab exercise
 
 //Define Server Port
-const port = process.env.PORT || 8081;
+const port = process.env.PORT || 8082;
 
 //Create Web Server using CORE API
 const server = http.createServer((req, res) => {
