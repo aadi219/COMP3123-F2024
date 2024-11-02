@@ -1,18 +1,16 @@
 import logo from "./logo.svg";
-import Welcome from "./Welcome.js";
-import Greeting from "./Greeting.js";
-import SayHello from "./SayHello.js";
 import "./App.css";
+import Exercise from "./Exercise";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Greeting name="gbc"/>
-        <SayHello fname="aadi" lname="badola" />
-        <Welcome />
-      </header>
+    <div style={{ textAlign: "center" }}>
+      <img src={logo} alt="logo" width={"600px"} />
+      <Exercise
+        studentId="101412150"
+        name="Aadi Badola"
+        college="George Brown College, Toronto"
+      />
     </div>
   );
 }
